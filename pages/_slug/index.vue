@@ -3,6 +3,7 @@
     <h1 class="title">{{ title }}</h1>
     <p class="publishedAt">{{ publishedAt }}</p>
     <div class="post" v-html="body"></div>
+    <p class="category">category：{{ category }}</p>
   </main>
 </template>
 
@@ -22,3 +23,18 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.publishedAt, .category {
+  text-align: right;
+  color: #666;
+  margin: 1rem 0;
+}
+.post {
+  line-height: 2;
+  >p {
+    margin-bottom: 1rem;
+    color: red;
+  }
+}
+</style>
